@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
     }
 
     public static class EmptyStjackException extends Throwable {
@@ -17,9 +17,11 @@ public class Main {
         public MyGenericStack() {
             stack = new LinkedList();
         }
+
         public void push(T element) {
             stack.addFirst(element);
         }
+
         public T pop() {
             if (isEmpty()) {
                 try {
@@ -30,15 +32,18 @@ public class Main {
             }
             return stack.removeFirst();
         }
+
         public int size() {
             return stack.size();
         }
+
         public boolean isEmpty() {
             if (stack.size() == 0) {
                 return true;
             }
             return false;
         }
+
         private static void stackOfIStrings() {
             MyGenericStack<String> stack = new MyGenericStack();
             stack.push("Five");
@@ -53,6 +58,7 @@ public class Main {
             }
             System.out.println("\n1.3. Size of stack after pop operations : " + stack.size());
         }
+
         private static void stackOfIntegers() {
             MyGenericStack<Integer> stack = new MyGenericStack();
             stack.push(5);
@@ -67,6 +73,7 @@ public class Main {
             }
             System.out.println("\n3.3 Size of stack after pop operations : " + stack.size());
         }
+
         public static class GenericStackClient {
             public static void main(String[] args) {
                 System.out.println("1. Stack of integers");
